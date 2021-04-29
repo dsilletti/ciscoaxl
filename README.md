@@ -107,26 +107,26 @@ for user in ucm.get_users():
 #### Get Specific User
 
 ```python
-user = ucm.get_user(user_id='mscott')
+user = ucm.get_user(userid='mscott')
 print(user.email)
 ```
 
 #### Add User
 
 ```python
-ucm.add_user(user_id='jlevensailor', last_name='Levensailor', first_name='Jeff')
+ucm.add_user(userid='mscott', firstName='Mark', lastName='Scott')
 ```
 
 #### Delete User
 
 ```python
-ucm.delete_user(user_id='jlevensailor')
+ucm.delete_user(userid='mscott')
 ```
 
 #### Update User
 
 ```python
-ucm.update_user(user_id='jlevensailor', password='Lagavulin16', pin='5432')
+ucm.update_user(userid='jlevensailor', password='Lagavulin16', pin='5432')
 ```
 
 ## Phones
