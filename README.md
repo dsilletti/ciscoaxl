@@ -79,7 +79,7 @@ cucm = '10.10.20.1'
 username = 'axlaccess'
 password = 'axlpassword'
 version = '12.5'
-ucm = axl(username=cucm_username,password=cucm_password,cucm=cucm,cucm_version=version)
+ucm = axl(username=username,password=password,cucm=cucm,cucm_version=version)
 ```
 
 > Note: all get methods that return more than 1 item have a tagfilter property that can allow more fields to return. Fields are filtered by default to increase performance, but if you need additional fields returned from the axl call, simply add the tagfilter={} to the request. Example:
@@ -290,14 +290,14 @@ for pt in ucm.get_partitions():
 #### Get Specific Partition
 
 ```python
-pt = ucm.get_partition(routePartitionName='pstn-pt')
+pt = ucm.get_partition(name='pstn-pt')
 print(pt.name)
 ```
 
 #### Add Partition
 
 ```python
-ucm.add_partition(routePartitionName='VIP_PT', description='Very Important Peep')
+ucm.add_partition(name='VIP_PT', description='Very Important Peep')
 ```
 
 #### Delete Partition
